@@ -70,22 +70,27 @@ const Home = () => {
               <img src={starIcon} alt="Estrella" className="countdown-icon" />
               <div className="countdown-timer">
                 <div className="time-unit">
-                  <span>{timeLeft.days}</span>
-                  <p>Días</p>
+                  <span className="time-number">{timeLeft.days}</span>
+                  <div className="time-divider"></div>
+                  <p className="time-label">Días</p>
                 </div>
                 <div className="time-unit">
-                  <span>{timeLeft.hours}</span>
-                  <p>Horas</p>
+                  <span className="time-number">{timeLeft.hours}</span>
+                  <div className="time-divider"></div>
+                  <p className="time-label">Horas</p>
                 </div>
                 <div className="time-unit">
-                  <span>{timeLeft.minutes}</span>
-                  <p>Minutos</p>
+                  <span className="time-number">{timeLeft.minutes}</span>
+                  <div className="time-divider"></div>
+                  <p className="time-label">Minutos</p>
                 </div>
                 <div className="time-unit">
-                  <span>{timeLeft.seconds}</span>
-                  <p>Segundos</p>
+                  <span className="time-number">{timeLeft.seconds}</span>
+                  <div className="time-divider"></div>
+                  <p className="time-label">Segundos</p>
                 </div>
               </div>
+
               <img src={starIcon} alt="Estrella" className="countdown-icon" />
             </div>
             {/* Divider Section */}
