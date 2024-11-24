@@ -100,9 +100,14 @@ const Home = () => {
                 El <strong>jueves 12 de diciembre</strong>, organizamos
                 transporte en bus hacia Valencia.
               </span>
-              <Link to="/bus-form" className="divider-link">
+              <a
+                href="https://forms.gle/iU3xzyuLXJ1kHU1T8"
+                className="divider-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Reserva tu plaza
-              </Link>
+              </a>
             </div>
           </>
         ) : (
