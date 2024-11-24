@@ -99,6 +99,17 @@ const Home = () => {
           </div>
         )}
       </div>
+      {/* Divider Section */}
+      <div className="divider">
+        <div className="divider-line"></div>
+        <span className="divider-text">El{" "}
+          <strong>jueves 12 de diciembre</strong>, organizamos transporte en bus
+          hacia Valencia.
+        </span>
+        <Link to="/bus-form" className="divider-link">
+          Reserva tu plaza
+        </Link>
+      </div>
     </>
   );
 };
