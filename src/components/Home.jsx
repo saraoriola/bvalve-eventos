@@ -65,50 +65,73 @@ const Home = () => {
       {/* Counter Section */}
       <div className="home-wrapper">
         {!isNotificationVisible ? (
-          <div className="countdown-wrapper">
-            <img src={starIcon} alt="Estrella" className="countdown-icon" />
-            <div className="countdown-timer">
-              <div className="time-unit">
-                <span>{timeLeft.days}</span>
-                <p>Días</p>
+          <>
+            <div className="countdown-wrapper">
+              <img src={starIcon} alt="Estrella" className="countdown-icon" />
+              <div className="countdown-timer">
+                <div className="time-unit">
+                  <span>{timeLeft.days}</span>
+                  <p>Días</p>
+                </div>
+                <div className="time-unit">
+                  <span>{timeLeft.hours}</span>
+                  <p>Horas</p>
+                </div>
+                <div className="time-unit">
+                  <span>{timeLeft.minutes}</span>
+                  <p>Minutos</p>
+                </div>
+                <div className="time-unit">
+                  <span>{timeLeft.seconds}</span>
+                  <p>Segundos</p>
+                </div>
               </div>
-              <div className="time-unit">
-                <span>{timeLeft.hours}</span>
-                <p>Horas</p>
-              </div>
-              <div className="time-unit">
-                <span>{timeLeft.minutes}</span>
-                <p>Minutos</p>
-              </div>
-              <div className="time-unit">
-                <span>{timeLeft.seconds}</span>
-                <p>Segundos</p>
-              </div>
+              <img src={starIcon} alt="Estrella" className="countdown-icon" />
             </div>
-            <img src={starIcon} alt="Estrella" className="countdown-icon" />
-          </div>
+            {/* Divider Section */}
+            <div className="divider">
+              <div className="divider-line"></div>
+              <span className="divider-text">
+                El <strong>jueves 12 de diciembre</strong>, organizamos
+                transporte en bus hacia Valencia.
+              </span>
+              <Link to="/bus-form" className="divider-link">
+                Reserva tu plaza
+              </Link>
+            </div>
+          </>
         ) : (
-          <div className="notification-wrapper">
-            <h1 className="notification-title">¡Ya casi estamos!</h1>
-            <p className="notification-message">
-              El evento empieza el 12 de diciembre a las 17:00h. ¡Te esperamos!
-            </p>
-            <Link to="/contenido" className="notification-button">
-              ¡Vamos!
-            </Link>
-          </div>
+          <>
+            <div className="countdown-wrapper">
+              <img src={starIcon} alt="Estrella" className="countdown-icon" />
+              <div className="countdown-timer">
+                <div className="time-unit">
+                  <span>{timeLeft.days}</span>
+                  <p>Días</p>
+                </div>
+                <div className="time-unit">
+                  <span>{timeLeft.hours}</span>
+                  <p>Horas</p>
+                </div>
+                <div className="time-unit">
+                  <span>{timeLeft.minutes}</span>
+                  <p>Minutos</p>
+                </div>
+                <div className="time-unit">
+                  <span>{timeLeft.seconds}</span>
+                  <p>Segundos</p>
+                </div>
+              </div>
+              <img src={starIcon} alt="Estrella" className="countdown-icon" />
+            </div>
+            <div className="divider-line"></div>
+            <div className="notification-wrapper">
+              <Link to="/contenido" className="divider-link">
+                ¡Vamos!
+              </Link>
+            </div>
+          </>
         )}
-      </div>
-      {/* Divider Section */}
-      <div className="divider">
-        <div className="divider-line"></div>
-        <span className="divider-text">El{" "}
-          <strong>jueves 12 de diciembre</strong>, organizamos transporte en bus
-          hacia Valencia.
-        </span>
-        <Link to="/bus-form" className="divider-link">
-          Reserva tu plaza
-        </Link>
       </div>
     </>
   );
