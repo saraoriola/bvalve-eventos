@@ -5,6 +5,7 @@ import Jueves from "../components/Jueves";
 import Viernes from "../components/Viernes";
 import Navbar from "../components/Navbar";
 import Content from "../components/Content";
+import ProtectedRoute from "./ProtectedRoute"
 
 const AppRoutes = () => {
   return (
@@ -12,7 +13,14 @@ const AppRoutes = () => {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/contenido" element={<Content />} />
+        <Route
+          path="/contenido"
+          element={
+            <ProtectedRoute>
+              <Content />
+            </ProtectedRoute>
+          }
+        />
         <Route path="/jueves" element={<Jueves />} />
         <Route path="/viernes" element={<Viernes />} />
       </Routes>
