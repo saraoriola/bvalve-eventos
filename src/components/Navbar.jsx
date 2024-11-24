@@ -1,5 +1,4 @@
 import React from "react";
-import fondonavbar from "../assets/img/fondonavbar.png";
 import logoWhite from "../assets/img/logowhite.png";
 import "./styles/Navbar.css";
 
@@ -7,9 +6,7 @@ const Navbar = () => {
   return (
     <nav
       style={{
-        backgroundImage: `url(${fondonavbar})`,
-        backgroundSize: "contain",
-        backgroundPosition: "center bottom",
+        backgroundColor: "#000",
         height: "100px",
         width: "100%",
         position: "fixed",
