@@ -1,10 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "./styles/Content.css";
+import ruta1 from "../assets/img/ruta1.png";
 
-const Content = () => {
-  return (
-    <div className="content-container">
+
+const Content = () => (
+  <>
+    {/* <div className="content-container">
       <h1 className="content-title">¡Bienvenidos al Evento!</h1>
       <p className="content-message">
         ¡Ha llegado el momento más esperado del año!
@@ -18,18 +19,15 @@ const Content = () => {
         aprendizajes y éxitos. Por ello, queremos mantener viva nuestra
         tradición y brindar por todo lo que hemos conseguido como equipo.
         <br />
+        <br />
         <strong>¡Os esperamos con mucha ilusión!</strong>
       </p>
-      <div className="content-buttons">
-        <Link to="/jueves" className="content-button">
-          Jueves
-        </Link>
-        <Link to="/viernes" className="content-button">
-          Viernes
-        </Link>
-      </div>
     </div>
-  );
-};
+    <div className="divider-line"></div> */}
+    <div className="ruta-container">
+      <img src={ruta1} alt="Evento de Navidad" className="ruta" />
+    </div>
+  </>
+);
 
 export default Content;

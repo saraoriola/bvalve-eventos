@@ -1,72 +1,117 @@
+/* Contenedor principal */
 .content-container {
+    padding: 20px;
     text-align: center;
-    padding: 0px 500px;
-    color: var(--green-100);
-    min-height: 80vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
+    padding-left: 30rem;
+    padding-right: 30rem;
 }
 
+/* Título principal */
 .content-title {
-    font-family: 'Fixel Text', sans-serif;
-    font-weight: 700;
-    font-size: 3.5rem;
-    color: var(--green-400);
+    font-size: 2vw;
+    font-weight: bold;
+    color: #333;
     margin-bottom: 20px;
 }
 
+/* Mensaje principal */
 .content-message {
-    font-family: 'Fixel Text', sans-serif;
-    font-weight: 400;
-    font-size: 1.5rem;
-    color: var(--green-200);
-    margin-bottom: 30px;
-    line-height: 1.8;
-
+    font-size: 1vw;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 20px;
 }
 
+/* Subtítulo */
 .content-subtitle {
-    font-family: 'Fixel Text', sans-serif;
-    font-weight: 400;
-    font-size: 1.2rem;
-    color: var(--green-100);
-    /* Verde más claro */
-    margin-bottom: 40px;
-    line-height: 1.6;
-
+    font-size: 1vw;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 30px;
 }
 
+.content-subtitle strong {
+    font-size: 1.5vw;
+    color: #333;
+}
+
+/* Botones */
 .content-buttons {
     display: flex;
+    justify-content: center;
     gap: 20px;
-    /* Espaciado entre botones */
+    flex-wrap: wrap;
+    /* Asegura que se ajusten en pantallas pequeñas */
 }
 
 .content-button {
-    font-family: 'Fixel Text', sans-serif;
-    font-weight: 500;
-    padding: 15px 30px;
-    font-size: 1.2rem;
-    background-color: var(--green-500);
-    /* Fondo verde */
-    color: var(--black-alpha-900);
-    /* Texto oscuro */
-    border: none;
+    font-size: 1.8vw;
+    font-weight: bold;
+    color: #fff;
+    background-color: #333;
+    padding: 10px 20px;
     border-radius: 5px;
-    cursor: pointer;
     text-decoration: none;
-    text-transform: uppercase;
     transition: all 0.3s ease;
-    box-shadow: 0 0 5px var(--green-400), 0 0 10px var(--green-400);
 }
 
 .content-button:hover {
-    background-color: var(--green-400);
-    /* Fondo más brillante */
-    box-shadow: 0 0 10px var(--green-400), 0 0 20px var(--green-400), 0 0 40px var(--green-400);
-    transform: scale(1.1);
-    /* Aumento del tamaño al pasar el cursor */
+    background-color: #555;
+    color: #fff;
+}
+
+/* Ajustes para dispositivos pequeños */
+@media (max-width: 768px) {
+    .content-title {
+        font-size: 6vw;
+        /* Ajusta el título */
+    }
+
+    .content-message,
+    .content-subtitle {
+        font-size: 4vw;
+        /* Reduce el tamaño del texto */
+    }
+
+    .content-button {
+        font-size: 4vw;
+        /* Ajusta el tamaño de los botones */
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .content-title {
+        font-size: 8vw;
+        /* Más grande para móviles */
+    }
+
+    .content-message,
+    .content-subtitle {
+        font-size: 5vw;
+        /* Texto legible en pantallas pequeñas */
+    }
+
+    .content-button {
+        font-size: 5vw;
+        padding: 6px 12px;
+    }
+}
+
+.ruta-container {
+    display: flex;
+    /* Flexbox para centrar el contenido */
+    justify-content: center;
+    /* Centra horizontalmente */
+    align-items: center;
+    /* Centra verticalmente */
+    height: 100%;
+    /* Asegura que el contenedor ocupe todo el espacio necesario */
+}
+
+.ruta {
+    width: 40%;
+    /* Ancho de la imagen */
+    object-fit: cover;
+    /* Ajusta la imagen sin deformarla */
 }
