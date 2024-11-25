@@ -15,7 +15,7 @@ const Home = () => {
   const [isNotificationVisible, setIsNotificationVisible] = useState(false);
 
   const eventDate = new Date("2024-12-12T17:00:00").getTime();
-  const notificationStartDate = new Date("2024-11-09T00:00:00").getTime();
+  const notificationStartDate = new Date("2024-12-09T00:00:00").getTime();
 
   useEffect(() => {
     const interval = setInterval(() => {
