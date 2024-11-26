@@ -1,71 +1,164 @@
-/* BusInfo Container */
+/* Contenedor General */
 .bus-info {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 20px;
-    background-color: #122e0f;
+    flex-direction: row;
+    /* Divide en dos columnas en pantallas grandes */
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: #f3f4f6;
 }
 
-/* Title */
+/* Imagen del Bus */
+.bus {
+    height: 20rem;
+    /* Tamaño predeterminado */
+    width: auto;
+    margin: 0 auto;
+    /* Centrado por defecto */
+    display: block;
+    /* Asegura que respete los márgenes */
+}
+
+/* Títulos Responsivos */
+.title-bus-info {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
 .bus-info-title {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+    /* Tamaño en pantallas grandes */
     font-weight: bold;
-    color: #ffffff;
+    color: #333;
+    font-family: 'Winchester', sans-serif;
+}
+
+.bus-info-subtitle {
+    font-size: 1.5rem;
+    /* Tamaño en pantallas grandes */
+    font-weight: 600;
+    color: #555;
     margin-bottom: 15px;
 }
 
-/* Text */
-.bus-info-text {
-    font-size: 1rem;
-    color: #ffffff;
-    margin-bottom: 10px;
-    line-height: 1.6;
+/* Contenedor del Padre */
+.bus-info-dad {
+    background-color: #f3f4f6;
 }
 
-/* Link */
+/* Columna Izquierda */
+.bus-info-left {
+    flex: 1;
+    padding-right: 20px;
+    display: flex;
+    justify-content: flex-end;
+    /* Alinea el bus a la derecha en pantallas grandes */
+    align-items: center;
+}
+
+/* Columna Derecha */
+.bus-info-right {
+    flex: 1;
+    text-align: left;
+    /* Justifica el texto a la izquierda */
+}
+
+/* Texto */
+.bus-info-text {
+    font-size: 1rem;
+    /* Tamaño predeterminado */
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+/* Enlaces */
 .bus-info-link {
-    color: #99c4a1;
+    color: #1d72b8;
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s ease;
 }
 
 .bus-info-link:hover {
-    color: #ffbb00;
+    color: #0d4a7d;
 }
 
-/* Botón de Reserva con Estilo Moderno */
+/* Botón */
 .bus-info-button {
     display: inline-block;
     margin-top: 15px;
     padding: 12px 24px;
-    background:transparent;
-    /* Gradiente atractivo */
-    color: #ffffff;
-    font-size: 1.1rem;
+    background-color: #333;
+    color: #fff;
+    font-size: 1rem;
     font-weight: bold;
     text-decoration: none;
-    border: 3px solid #ffffff;
-    border-radius: 25px;
-    /* Bordes redondeados para un look moderno */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    /* Sombra ligera */
+    border-radius: 16px;
+    border: none;
     transition: all 0.3s ease;
-    /* Suaviza las transiciones */
 }
 
-/* Efecto Hover */
 .bus-info-button:hover {
-        background: linear-gradient(45deg, #82c08f, #3fa344);
-            color: #ffffff;
-
+    background-color: #555;
+    color: #fff;
 }
 
-/* Efecto Activo (al hacer clic) */
-.bus-info-button:active {
-    transform: translateY(1px);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+/* Responsividad */
+@media (max-width: 768px) {
+    .bus-info {
+        flex-direction: column;
+        /* Cambia a una sola columna en móviles */
+        padding-left: 20px;
+        padding-right: 20px;
+        align-items: center;
+        /* Centra todo el contenido */
+        text-align: center;
+    }
+
+    .bus-info-left,
+    .bus-info-right {
+        padding: 0;
+        margin-bottom: 20px;
+        display: flex;
+        /* Habilita flexbox */
+        flex-direction: column;
+        /* Asegura que los elementos sean verticales */
+        align-items: center;
+        /* Centra todo el contenido */
+    }
+
+    .bus {
+        margin: 0 auto;
+        /* Asegura que esté centrado */
+        height: 10rem;
+        /* Tamaño del bus en móviles */
+        width: auto;
+    }
+
+    .bus-info-title {
+        font-size: 1.5rem;
+        /* Tamaño del título en móviles */
+    }
+
+    .bus-info-subtitle {
+        font-size: 1.2rem;
+        /* Tamaño del subtítulo en móviles */
+    }
+
+    .bus-info-text {
+        font-size: 0.9rem;
+        /* Tamaño del texto en móviles */
+    }
+
+    .bus-info-button {
+        font-size: 0.9rem;
+        /* Botón más pequeño en móviles */
+    }
 }

@@ -47,7 +47,7 @@
     font-size: 1rem;
     font-weight: 500;
     color: #555;
-}
+    font-family: 'Winchester', sans-serif;}
 
 
 @media (max-width: 1024px) {
@@ -96,4 +96,11 @@
     .time-label {
         font-size: 0.7rem;
     }
+}
+
+@font-face {
+    font-family: 'Winchester';
+    src: url('../../assets//fonts/Winchester-xgD8.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
