@@ -4,20 +4,16 @@
 
 /* Fondo global para toda la web */
 body {
+    padding: 0;
     margin: 0;
     font-family: 'Fixel Text', sans-serif;
     padding-top: 70px;
     background: url('./assets/img/fondo.jpg') no-repeat center center;
     background-size: cover;
-    min-height: 100vh;
     height: auto;
     background-attachment: fixed;
     color: #000;
-}
-
-html {
-    min-height: 100%;
-    height: auto;
+    overflow-x: hidden;
 }
 
 h1,

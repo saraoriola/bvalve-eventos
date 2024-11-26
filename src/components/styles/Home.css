@@ -13,73 +13,16 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    overflow: hidden;
 }
 
 .event-image {
     width: 100%;
-    height: 50vh;
+    /* La imagen ocupará todo el ancho disponible */
+    height: auto;
+    /* Mantiene la proporción de la imagen */
     object-fit: cover;
-}
-
-/* Countdown Section */
-.countdown-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    padding: 50px;
-   
-}
-
-.countdown-icon {
-    width: 80px;
-    height: 80px;
-    object-fit: contain;
-}
-
-.countdown-timer {
-    display: flex;
-    gap: 20px;
-}
-
-/* Countdown Timer */
-.time-unit {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-
-.time-number {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 25px;
-}
-
-.time-divider {
-    width: 30px;
-    height: 2px;
-    background-color: #333;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.time-label {
-    margin-top: 0;
-    font-size: 1rem;
-    font-weight: 500;
-    color: #555;
-}
-
-.time-divider {
-    width: 30px;
-    height: 2px;
-    background-color: #3333333a;
-    margin: 5px 0;
-    border-radius: 1px;
+    /* Asegura que la imagen se ajuste sin deformarse */
 }
 
 /* Notification Section */
@@ -146,8 +89,4 @@
 .divider-link:hover {
     background-color: #000;
     color: #fff;
-}
-
-.whitebox {
-    background-color: #fff;
 }

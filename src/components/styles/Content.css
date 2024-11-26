@@ -1,120 +1,137 @@
-/* Contenedor principal */
-.content-container {
-    padding: 20px;
-    text-align: center;
-    padding-left: 30rem;
-    padding-right: 30rem;
+/* Whitebox */
+.whitebox {
+background-color: #ffffff;
 }
 
-/* Título principal */
-.content-title {
-    font-size: 2vw;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-/* Mensaje principal */
-.content-message {
-    font-size: 1vw;
-    color: #555;
-    line-height: 1.5;
-    margin-bottom: 20px;
-}
-
-/* Subtítulo */
-.content-subtitle {
-    font-size: 1vw;
-    color: #666;
-    line-height: 1.5;
-    margin-bottom: 30px;
-}
-
-.content-subtitle strong {
-    font-size: 1.5vw;
-    color: #333;
-}
-
-/* Botones */
-.content-buttons {
+/* Countdown Wrapper */
+.countdown-wrapper {
     display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    /* Asegura que se ajusten en pantallas pequeñas */
-}
-
-.content-button {
-    font-size: 1.8vw;
-    font-weight: bold;
-    color: #fff;
-    background-color: #333;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-.content-button:hover {
-    background-color: #555;
-    color: #fff;
-}
-
-/* Ajustes para dispositivos pequeños */
-@media (max-width: 768px) {
-    .content-title {
-        font-size: 6vw;
-        /* Ajusta el título */
-    }
-
-    .content-message,
-    .content-subtitle {
-        font-size: 4vw;
-        /* Reduce el tamaño del texto */
-    }
-
-    .content-button {
-        font-size: 4vw;
-        /* Ajusta el tamaño de los botones */
-        padding: 8px 16px;
-    }
-}
-
-@media (max-width: 480px) {
-    .content-title {
-        font-size: 8vw;
-        /* Más grande para móviles */
-    }
-
-    .content-message,
-    .content-subtitle {
-        font-size: 5vw;
-        /* Texto legible en pantallas pequeñas */
-    }
-
-    .content-button {
-        font-size: 5vw;
-        padding: 6px 12px;
-    }
-}
-
-.ruta-container {
-    display: flex;
-    justify-content: center;
     align-items: center;
-    height: 100%;
+    /* Centra verticalmente los elementos */
+    justify-content: center;
+    /* Centra el temporizador */
+    position: relative;
+    /* Permite posicionar las estrellas */
+    gap: 20px;
 }
 
-.ruta {
-    width: 40%;
-    object-fit: cover;
+/* Countdown Icon - Estrellas */
+.countdown-icon {
+    width: 50px;
+    /* Tamaño fijo */
+    height: 50px;
+    object-fit: contain;
+    /* Mantiene las proporciones */
+    position: absolute;
+    /* Permite colocarlas en los laterales */
+    top: 50%;
+    /* Centra verticalmente en el contenedor */
+    transform: translateY(-50%);
+    /* Corrige el centrado vertical */
 }
 
+.countdown-wrapper img:first-child {
+    left: 10px;
+    /* Estrella izquierda */
+}
+
+.countdown-wrapper img:last-child {
+    right: 10px;
+    /* Estrella derecha */
+}
+
+/* Countdown Timer */
+.countdown-timer {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: nowrap;
+    /* Mantiene todo en una fila */
+    flex: 1;
+}
+
+/* Time Unit */
+.time-unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.time-number {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.time-label {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #555;
+}
+
+/* Media Queries */
+
+/* Tablet - Pantallas entre 768px y 1024px */
+@media (max-width: 1024px) {
+    .whitebox {
+        padding: 15px;
+    }
+
+    .countdown-wrapper {
+        gap: 15px;
+    }
+
+    .countdown-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .time-number {
+        font-size: 1.8rem;
+    }
+
+    .time-label {
+        font-size: 0.9rem;
+    }
+}
+
+/* Móviles - Pantallas de menos de 768px */
 @media (max-width: 768px) {
+    .whitebox {
+        padding: 10px;
+    }
 
-    /* Ajusta el ancho del breakpoint según sea necesario */
-    .ruta {
-        width: 100%;
-        /* La imagen ocupará el 100% del ancho en pantallas más pequeñas */
+    .countdown-wrapper {
+        gap: 10px;
+    }
+
+    .countdown-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .time-number {
+        font-size: 1.5rem;
+    }
+
+    .time-label {
+        font-size: 0.8rem;
+    }
+}
+
+/* Muy pequeños - Pantallas menores a 480px */
+@media (max-width: 480px) {
+    .countdown-icon {
+        width: 25px;
+        height: 25px;
+    }
+
+    .time-number {
+        font-size: 1.2rem;
+    }
+
+    .time-label {
+        font-size: 0.7rem;
     }
 }
