@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Countdown from "./Countdown";
 import EventImage from "./EventImage";
-import Divider from "./Divider";
+import BusForm from "./BusForm";
 import Content from "./Content";
-import "./styles/Home.css"
+import "./styles/Home.css";
 
 const Home = () => {
   const [timeLeft, setTimeLeft] = useState({
@@ -62,8 +62,8 @@ const Home = () => {
       <div>
         {!isNotificationVisible ? (
           <>
-              <Countdown timeLeft={timeLeft} />
-              <Divider />
+            <Countdown timeLeft={timeLeft} />
+            <BusForm />
           </>
         ) : (
           <>

@@ -1,0 +1,71 @@
+/* BusInfo Container */
+.bus-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    background-color: #122e0f;
+}
+
+/* Title */
+.bus-info-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+/* Text */
+.bus-info-text {
+    font-size: 1rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+/* Link */
+.bus-info-link {
+    color: #99c4a1;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.bus-info-link:hover {
+    color: #ffbb00;
+}
+
+/* Botón de Reserva con Estilo Moderno */
+.bus-info-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 24px;
+    background:transparent;
+    /* Gradiente atractivo */
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border: 3px solid #ffffff;
+    border-radius: 25px;
+    /* Bordes redondeados para un look moderno */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Sombra ligera */
+    transition: all 0.3s ease;
+    /* Suaviza las transiciones */
+}
+
+/* Efecto Hover */
+.bus-info-button:hover {
+        background: linear-gradient(45deg, #82c08f, #3fa344);
+            color: #ffffff;
+
+}
+
+/* Efecto Activo (al hacer clic) */
+.bus-info-button:active {
+    transform: translateY(1px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
