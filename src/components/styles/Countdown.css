@@ -4,7 +4,6 @@
     padding: 20px;
 }
 
-/* Countdown Wrapper */
 .countdown-wrapper {
     display: flex;
     align-items: center;
@@ -15,7 +14,6 @@
     overflow: hidden;
 }
 
-/* Countdown Icon */
 .countdown-icon {
     width: 50px;
     height: 50px;
@@ -23,21 +21,15 @@
     flex-shrink: 0;
 }
 
-/* Countdown Timer para Pantallas Grandes */
 .countdown-timer {
     display: flex;
     gap: 40px;
-    /* Espaciado amplio para pantallas grandes */
     justify-content: center;
-    /* Centra los elementos */
     flex-wrap: nowrap;
-    /* Mantén todo en una sola fila */
     margin-left: 30px;
-    /* Margen a los lados */
     margin-right: 30px;
 }
 
-/* Time Unit (Unidades del Temporizador) */
 .time-unit {
     display: flex;
     flex-direction: column;
@@ -47,78 +39,61 @@
 
 .time-number {
     font-size: 2rem;
-    /* Tamaño del número en pantallas grandes */
     font-weight: bold;
     color: #333;
 }
 
 .time-label {
     font-size: 1rem;
-    /* Tamaño de la etiqueta en pantallas grandes */
     font-weight: 500;
     color: #555;
 }
 
 
-/* Ajustes para Tablets (1024px o menor) */
 @media (max-width: 1024px) {
     .countdown-timer {
         gap: 30px;
-        /* Reduce el espacio entre las unidades */
         margin-left: 20px;
-        /* Ajusta el margen lateral */
         margin-right: 20px;
     }
 
     .time-number {
         font-size: 1.8rem;
-        /* Reduce el tamaño del número */
     }
 
     .time-label {
         font-size: 0.9rem;
-        /* Reduce el tamaño de la etiqueta */
     }
 }
 
-/* Ajustes para Móviles (768px o menor) */
 @media (max-width: 768px) {
     .countdown-timer {
         gap: 20px;
-        /* Menos espacio entre unidades para pantallas pequeñas */
         margin-left: 15px;
-        /* Ajusta los márgenes laterales */
         margin-right: 15px;
     }
 
     .time-number {
         font-size: 1.5rem;
-        /* Tamaño reducido para pantallas pequeñas */
     }
 
     .time-label {
         font-size: 0.8rem;
-        /* Tamaño reducido para la etiqueta */
     }
 }
 
-/* Ajustes para Pantallas Muy Pequeñas (480px o menor) */
 @media (max-width: 480px) {
     .countdown-timer {
         gap: 10px;
-        /* Espacio mínimo entre unidades */
         margin-left: 10px;
-        /* Margen lateral reducido */
         margin-right: 10px;
     }
 
     .time-number {
         font-size: 1.2rem;
-        /* Tamaño más pequeño para números */
     }
 
     .time-label {
         font-size: 0.7rem;
-        /* Tamaño más pequeño para etiquetas */
     }
 }
