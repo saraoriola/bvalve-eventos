@@ -1,12 +1,9 @@
-import React from "react";
+import React from 'react'
 
 const Viernes = () => {
   return (
-    <div>
-      <h1>Vierneso</h1>
-      <p>Para más información, envíanos un mensaje.</p>
-    </div>
-  );
-};
+    <div>Viernes</div>
+  )
+}
 
-export default Viernes;
+export default Viernes

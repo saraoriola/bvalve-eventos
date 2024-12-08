@@ -8,3 +8,27 @@
     height: 30px;
     width: auto;
 }
+
+.card {
+  position: fixed;
+  top: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  width: 90%;
+  max-width: 600px;
+}
+
+@media (max-width: 768px) {
+.card {
+        margin-left: 20px;
+        /* Márgenes laterales en móvil */
+        margin-right: 20px;
+        width: calc(100% - 40px);
+        /* Ajusta el ancho para respetar los márgenes */
+    }
+}

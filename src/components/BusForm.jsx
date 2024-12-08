@@ -9,9 +9,6 @@ const BusForm = () => (
         <h3 className="bus-info-title">Jueves 12</h3>
       </div>
       <div className="bus-info">
-        <div className="bus-info-left">
-          <img src={bus} alt="Logo Mi Evento" className="bus" />
-        </div>
         <div className="bus-info-right">
           <h3 className="bus-info-subtitle">Bus para la previa 😎</h3>
 

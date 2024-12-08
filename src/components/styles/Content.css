@@ -8,7 +8,6 @@
     text-align: left;
     padding-left: 50px;
     padding-right: 50px;
-    background-color: #f3f4f6;
 }
 
 /* Imagen del Bus */
@@ -48,10 +47,6 @@
     margin-bottom: 15px;
 }
 
-/* Contenedor del Padre */
-.bus-info-dad {
-    background-color: #f3f4f6;
-}
 
 /* Columna Izquierda */
 .bus-info-left {
@@ -129,9 +124,6 @@
         display: flex;
         /* Habilita flexbox */
         flex-direction: column;
-        /* Asegura que los elementos sean verticales */
-        align-items: center;
-        /* Centra todo el contenido */
     }
 
     .bus {
@@ -160,5 +152,29 @@
     .bus-info-button {
         font-size: 0.9rem;
         /* Botón más pequeño en móviles */
+    }
+}
+
+.ruta-container {
+    display: flex;
+    flex-direction: column;
+    /* Cambia el eje principal a columna */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* Añade espacio entre las imágenes */
+}
+
+.ruta {
+    width: 80%;
+    max-width: 100%;
+    /* Asegura que no exceda el contenedor */
+    height: auto;
+    /* Mantiene la proporción de la imagen */
+}
+
+@media (max-width: 768px) {
+    .ruta {
+        width: 100%;
     }
 }
