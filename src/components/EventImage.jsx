@@ -1,10 +1,12 @@
 import React from "react";
-import eventImage from "../assets/img/navidad2023.jpg";
+import videoSource from "../assets/img/adding.mp4";
 
-const EventImage = () => (
+const EventVideo = () => (
   <div className="image-wrapper">
-    <img src={eventImage} alt="Evento de Navidad" className="event-image" />
+    <video src={videoSource} className="event-image" autoPlay loop muted>
+      Tu navegador no soporta la reproducción de videos.
+    </video>
   </div>
 );
 
-export default EventImage;
+export default EventVideo;
