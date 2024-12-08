@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Countdown from "./Countdown";
 import EventImage from "./EventImage";
-import BusForm from "./BusForm";
 import Content from "./Content";
 import "./styles/Home.css";
 
@@ -63,7 +62,6 @@ const Home = () => {
         {!isNotificationVisible ? (
           <>
             <Countdown timeLeft={timeLeft} />
-            <BusForm />
           </>
         ) : (
           <>
